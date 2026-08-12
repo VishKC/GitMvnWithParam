@@ -23,17 +23,20 @@ public class TestToBuild {
 		
 		if(browserName.equalsIgnoreCase("Chrome")) {
 //			System.setProperty("webdriver.chrome.driver", "D:\\Selenium\\chromedriver_win32\\chromedriver.exe");
-			WebDriverManager.chromedriver().setup();
+//			WebDriverManager.chromedriver().setup();
+			WebDriverManager.chromedriver().driverVersion("151.0.7922.76").setup();
 			driver = new ChromeDriver();
 		}
 		else if(browserName.equalsIgnoreCase("Firefox")) {
 //			System.setProperty("webdriver.gecko.driver", "D:\\Selenium\\geckodriver-v0.33.0-win32\\geckodriver.exe");
-			WebDriverManager.firefoxdriver().setup();
+//			WebDriverManager.firefoxdriver().setup();
+			WebDriverManager.firefoxdriver().driverVersion("0.37.1").setup();
 			driver = new FirefoxDriver();
 		}
 		else if(browserName.equalsIgnoreCase("Edge")) {
 //			System.setProperty("webdriver.edge.driver", "D:\\Selenium\\edgedriver_win64\\msedgedriver.exe");
-			WebDriverManager.edgedriver().setup();
+//			WebDriverManager.edgedriver().setup();
+			WebDriverManager.iedriver().driverVersion("4.14.0").setup();
 			driver = new EdgeDriver();
 		}
 		driver.manage().window().maximize();
